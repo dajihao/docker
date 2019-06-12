@@ -5,6 +5,9 @@
 ```
 cd /mnt/hgfs/docker/compose
 docker-compose up -d --build
+
+修改nginx
+docker restart nginx
 ```
 
 ## docker安装
