@@ -1,4 +1,4 @@
-version: "2"
+version: "3"
 services:
     mysql:
         build: ./mysql
@@ -25,7 +25,7 @@ services:
       ports:
         - "9000:9000"
       volumes:
-        - /mnt/hgfs/docker/project:/var/html
+        - /mnt/hgfs/docker/project:/var/www/html
         - /mnt/hgfs/docker/php7.1/php.ini:/usr/local/etc/php/php.ini
       links:
         - "mysql"
@@ -37,7 +37,7 @@ services:
       ports:
         - "9001:9000"
       volumes:
-        - /mnt/hgfs/docker/project:/var/html
+        - /mnt/hgfs/docker/project:/var/www/html
         - /mnt/hgfs/docker/php5.6/php.ini:/usr/local/etc/php/php.ini
       links:
         - "mysql"
