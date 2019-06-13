@@ -6,7 +6,7 @@
 cd /mnt/hgfs/docker/compose
 docker-compose up -d --build
 
-修改nginx
+重启nginx
 docker restart nginx
 ```
 
