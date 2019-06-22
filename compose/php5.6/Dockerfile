@@ -2,8 +2,12 @@ FROM php:5.6-fpm
 
 ENV TZ=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ  /etc/localtime && echo $TZ > /etc/timezone
-
+	
 # Libs
+RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list
+  
+RUN apt-get clean
+
 RUN apt-get update \
     && apt-get install -y \
     curl \
