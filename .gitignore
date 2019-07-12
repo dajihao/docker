@@ -1,4 +1,6 @@
 /.idea
 /nginx/.idea
+/compose/.idea
+/php7.1/.idea
 /mysql/*
 /redis/*
