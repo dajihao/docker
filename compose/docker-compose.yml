@@ -22,11 +22,25 @@ services:
       build: ./php7.1
       container_name: "php7.1"
       restart: always
+      extra_hosts:
+            - api.alone.xmlocal.com:172.18.0.2
       ports:
         - "9000:9000"
       volumes:
         - /mnt/hgfs/docker/project:/var/www/html
         - /mnt/hgfs/docker/php7.1/php.ini:/usr/local/etc/php/php.ini
+      links:
+        - "mysql"
+        - "redis"
+    php7.2:
+      build: ./php7.2
+      container_name: "php7.2"
+      restart: always
+      ports:
+        - "9002:9000"
+      volumes:
+        - /mnt/hgfs/docker/project:/var/www/html
+        - /mnt/hgfs/docker/php7.2/php.ini:/usr/local/etc/php/php.ini
       links:
         - "mysql"
         - "redis"
@@ -51,6 +65,7 @@ services:
         links:
           - "php7.1"
           - "php5.6"
+          - "php7.2"
         volumes:
           - /mnt/hgfs/docker/project:/usr/share/nginx/html
           - /mnt/hgfs/docker/nginx:/etc/nginx
