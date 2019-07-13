@@ -4,3 +4,4 @@
 /php7.1/.idea
 /mysql/*
 /redis/*
+/nginx/conf.d/*.conf
