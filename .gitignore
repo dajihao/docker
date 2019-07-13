@@ -6,4 +6,5 @@
 /php5.6/.idea
 /mysql/*
 /redis/*
+/nginx/conf.d/.idea
 /nginx/conf.d/*.conf
