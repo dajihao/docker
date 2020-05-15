@@ -40,10 +40,10 @@ RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-di
 RUN pecl install swoole && docker-php-ext-enable swoole \
     && pecl install hprose && docker-php-ext-enable hprose
 
-RUN curl -sS https://getcomposer.org/installer | php \
-  && mv composer.phar /usr/local/bin/composer \
-  && composer self-update --clean-backups \
-  && composer config -g repo.packagist composer https://packagist.laravel-china.org
+RUN wget https://mirrors.aliyun.com/composer/composer.phar \
+     && mv composer.phar /usr/local/bin/composer \
+     && chmod a+x /usr/local/bin/composer \
+     && composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 
 RUN echo "opcache.enable=1" >>/usr/local/etc/php/conf.d/docker-php-ext-opcache.ini \
     && echo "opcache.memory_consumption=1024" >>/usr/local/etc/php/conf.d/docker-php-ext-opcache.ini \
@@ -51,4 +51,8 @@ RUN echo "opcache.enable=1" >>/usr/local/etc/php/conf.d/docker-php-ext-opcache.i
     && echo "opcache.max_accelerated_files=4000" >>/usr/local/etc/php/conf.d/docker-php-ext-opcache.ini \
     && echo "opcache.revalidate_freq=1" >>/usr/local/etc/php/conf.d/docker-php-ext-opcache.ini \
     && echo "opcache.fast_shutdown=1" >>/usr/local/etc/php/conf.d/docker-php-ext-opcache.ini
+
+#RUN cp /var/www/html/id_rsa ~/.ssh/ \
+#    && cp /var/www/html/id_rsa.pub ~/.ssh/ \
+#    && chmod 700  ~/.ssh/id_rsa
 

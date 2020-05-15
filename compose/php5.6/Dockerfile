@@ -49,3 +49,6 @@ RUN echo "opcache.enable=1" >>/usr/local/etc/php/conf.d/docker-php-ext-opcache.i
     && echo "opcache.revalidate_freq=1" >>/usr/local/etc/php/conf.d/docker-php-ext-opcache.ini \
     && echo "opcache.fast_shutdown=1" >>/usr/local/etc/php/conf.d/docker-php-ext-opcache.ini
 
+#RUN cp /var/www/html/id_rsa ~/.ssh/ \
+#    && cp /var/www/html/id_rsa.pub ~/.ssh/ \
+#    && chmod 700 ~/.ssh//id_rsa

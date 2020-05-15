@@ -8,3 +8,4 @@
 /redis/*
 /nginx/conf.d/.idea
 /nginx/conf.d/*.conf
+/project

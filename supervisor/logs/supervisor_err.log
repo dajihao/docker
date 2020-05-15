@@ -1,0 +1,167 @@
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+PHP Fatal error:  Uncaught Error: Class 'App\Jrtt\Models\JrttSite' not found in /var/www/html/marketing/spider/www/app/Services/Catcher/Processor/Jrtt/SiteProcessor.php:53
+Stack trace:
+#0 /var/www/html/marketing/spider/www/app/Services/Catcher/ManageAbstract.php(139): App\Services\Catcher\Processor\Jrtt\SiteProcessor->parse(Array)
+#1 /var/www/html/marketing/spider/www/app/Services/Catcher/ManageAbstract.php(100): App\Services\Catcher\ManageAbstract->save(Array)
+#2 /var/www/html/marketing/spider/www/app/Services/Catcher/CatcherService.php(24): App\Services\Catcher\ManageAbstract->run()
+#3 /var/www/html/marketing/spider/www/app/Services/SpiderService.php(64): App\Services\Catcher\CatcherService->run(Object(App\Models\MediaAccount), Object(App\Models\ChannelTask), Array)
+#4 [internal function]: App\Services\SpiderService->onTask(Object(Swoole\Server), 36, 1, Array)
+#5 /var/www/html/marketing/spider/www/vendor/hprose/hprose-swoole/src/Hprose/Swoole/Socket/Server.php(105): Swoole\Server->start()
+#6 [internal function]: Hprose\Swool in /var/www/html/marketing/spider/www/app/Services/Catcher/Processor/Jrtt/SiteProcessor.php on line 53
+PHP Fatal error:  Uncaught Error: Class 'App\Jrtt\Models\JrttSite' not found in /var/www/html/marketing/spider/www/app/Services/Catcher/Processor/Jrtt/SiteProcessor.php:53
+Stack trace:
+#0 /var/www/html/marketing/spider/www/app/Services/Catcher/ManageAbstract.php(139): App\Services\Catcher\Processor\Jrtt\SiteProcessor->parse(Array)
+#1 /var/www/html/marketing/spider/www/app/Services/Catcher/ManageAbstract.php(100): App\Services\Catcher\ManageAbstract->save(Array)
+#2 /var/www/html/marketing/spider/www/app/Services/Catcher/CatcherService.php(24): App\Services\Catcher\ManageAbstract->run()
+#3 /var/www/html/marketing/spider/www/app/Services/SpiderService.php(64): App\Services\Catcher\CatcherService->run(Object(App\Models\MediaAccount), Object(App\Models\ChannelTask), Array)
+#4 [internal function]: App\Services\SpiderService->onTask(Object(Swoole\Server), 0, 1, Array)
+#5 /var/www/html/marketing/spider/www/vendor/hprose/hprose-swoole/src/Hprose/Swoole/Socket/Server.php(105): Swoole\Server->start()
+#6 [internal function]: Hprose\Swoole in /var/www/html/marketing/spider/www/app/Services/Catcher/Processor/Jrtt/SiteProcessor.php on line 53
+PHP Fatal error:  Uncaught Error: Class 'App\Jrtt\Models\JrttSite' not found in /var/www/html/marketing/spider/www/app/Services/Catcher/Processor/Jrtt/SiteProcessor.php:53
+Stack trace:
+#0 /var/www/html/marketing/spider/www/app/Services/Catcher/ManageAbstract.php(139): App\Services\Catcher\Processor\Jrtt\SiteProcessor->parse(Array)
+#1 /var/www/html/marketing/spider/www/app/Services/Catcher/ManageAbstract.php(100): App\Services\Catcher\ManageAbstract->save(Array)
+#2 /var/www/html/marketing/spider/www/app/Services/Catcher/CatcherService.php(24): App\Services\Catcher\ManageAbstract->run()
+#3 /var/www/html/marketing/spider/www/app/Services/SpiderService.php(64): App\Services\Catcher\CatcherService->run(Object(App\Models\MediaAccount), Object(App\Models\ChannelTask), Array)
+#4 [internal function]: App\Services\SpiderService->onTask(Object(Swoole\Server), 0, 0, Array)
+#5 /var/www/html/marketing/spider/www/vendor/hprose/hprose-swoole/src/Hprose/Swoole/Socket/Server.php(105): Swoole\Server->start()
+#6 [internal function]: Hprose\Swoole in /var/www/html/marketing/spider/www/app/Services/Catcher/Processor/Jrtt/SiteProcessor.php on line 53
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /data/web/marketing/api/www/: ENOENT
+supervisor: child process was not spawned
+PHP Fatal error:  Trait 'App\Services\ChannelPush\Jrtt\Helper\RequestHelper' not found in /var/www/html/marketing/spider/www/app/Services/Catcher/Processor/Jrtt/GroupDetailProcessor.php on line 20
+PHP Fatal error:  Trait 'App\Services\ChannelPush\Jrtt\Helper\RequestHelper' not found in /var/www/html/marketing/spider/www/app/Services/Catcher/Processor/Jrtt/GroupDetailProcessor.php on line 20
+PHP Fatal error:  Trait 'App\Services\ChannelPush\Jrtt\Helper\RequestHelper' not found in /var/www/html/marketing/spider/www/app/Services/Catcher/Processor/Jrtt/GroupDetailProcessor.php on line 20
+PHP Fatal error:  Trait 'App\Services\ChannelPush\Jrtt\Helper\RequestHelper' not found in /var/www/html/marketing/spider/www/app/Services/Catcher/Processor/Jrtt/GroupDetailProcessor.php on line 20
