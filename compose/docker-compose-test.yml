@@ -1,0 +1,102 @@
+version: "3"
+services:
+    mysql:
+        build: ./mysql
+        container_name: "mysql"
+        restart: always
+        ports:
+          - "3306:3306"
+        volumes:
+          - /mnt/hgfs/docker/mysql:/var/lib/mysql
+          - /mnt/hgfs/docker/project/sql:/sql
+        environment:
+          MYSQL_ROOT_PASSWORD: 123456
+#    redis:
+#        build: ./redis
+#        container_name: "redis"
+#        restart: always
+#        ports:
+#          - "6379:6379"
+#        volumes:
+#          - /mnt/hgfs/docker/redis:/data
+#    php7.1:
+#      build: ./php7.1
+#      container_name: "php7.1"
+#      restart: always
+#      ports:
+#        - "9000:9000"
+#      volumes:
+#        - /mnt/hgfs/docker/project:/var/www/html
+#        - /mnt/hgfs/docker/php7.1/php.ini:/usr/local/etc/php/php.ini
+#      links:
+#        - "mysql"
+#        - "redis"
+#    php7.2:
+#      build: ./php7.2
+#      container_name: "php7.2"
+#      restart: always
+#      ports:
+#        - "9002:9000"
+#      volumes:
+#        - /mnt/hgfs/docker/project:/var/www/html
+#        - /mnt/hgfs/docker/supervisor:/etc/supervisor
+#        - /mnt/hgfs/docker/php7.2/php.ini:/usr/local/etc/php/php.ini
+#      links:
+#        - "mysql"
+#        - "redis"
+#    php5.6:
+#      build: ./php5.6
+#      container_name: "php5.6"
+#      restart: always
+#      ports:
+#        - "9001:9000"
+#      volumes:
+#        - /mnt/hgfs/docker/project:/var/www/html
+#        - /mnt/hgfs/docker/php5.6/php.ini:/usr/local/etc/php/php.ini
+#      links:
+#        - "mysql"
+#        - "redis"
+#    nginx:
+#        build: ./nginx
+#        container_name: "nginx"
+#        restart: always
+#        ports:
+#          - "80:80"
+#        links:
+#          - "php7.1"
+#          - "php5.6"
+#          - "php7.2"
+#        volumes:
+#          - /mnt/hgfs/docker/project:/usr/share/nginx/html
+#          - /mnt/hgfs/docker/nginx:/etc/nginx
+#          - /mnt/hgfs/docker/logs/nginx.logs:/var/log/nginx
+#        networks:
+#          default:
+#            aliases:
+#              - api.alone.xmlocal.com
+#              - adm.adpage.local.com
+#              - api.online.xmlocal.com
+#              - adm.platform.local.com
+#              - h5api.itogame.local.com
+#              - cas.local.com
+#              - adm.publish.local.com
+#              - adm.h5platform.local.com
+#              - oa.local.com
+#              - adm.admanager.local.com
+#              - adtrace.local.com
+#              - marketing.api.local.com
+#              - marketing.apiwj.local.com
+#              - marketing.apiyp.local.com
+#              - api.wd.cc
+#              - marketing.apihw.local.com
+#    clickhouse:
+#            build: ./clickhouse
+#            container_name: "clickhouse"
+#            restart: always
+#            ports:
+#                  - "9003:9000"
+#                  - "8123:8123"
+#            ulimits:
+#                  nofile:
+#                    soft: 300001
+#                    hard: 300002
