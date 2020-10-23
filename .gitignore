@@ -5,6 +5,7 @@
 /php7.2/.idea
 /php5.6/.idea
 /supervisor/.idea
+/supervisor/logs/*
 /mysql/*
 /redis/*
 /nginx/conf.d/.idea

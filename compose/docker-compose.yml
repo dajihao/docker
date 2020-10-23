@@ -23,8 +23,6 @@ services:
       build: ./php7.1
       container_name: "php7.1"
       restart: always
-      ports:
-        - "9000:9000"
       volumes:
         - /mnt/hgfs/docker/project:/var/www/html
         - /mnt/hgfs/docker/php7.1/php.ini:/usr/local/etc/php/php.ini
@@ -35,8 +33,6 @@ services:
       build: ./php7.2
       container_name: "php7.2"
       restart: always
-      ports:
-        - "9002:9000"
       volumes:
         - /mnt/hgfs/docker/project:/var/www/html
         - /mnt/hgfs/docker/supervisor:/etc/supervisor
@@ -48,8 +44,6 @@ services:
       build: ./php5.6
       container_name: "php5.6"
       restart: always
-      ports:
-        - "9001:9000"
       volumes:
         - /mnt/hgfs/docker/project:/var/www/html
         - /mnt/hgfs/docker/php5.6/php.ini:/usr/local/etc/php/php.ini
@@ -62,6 +56,8 @@ services:
         restart: always
         ports:
           - "80:80"
+          - "8088:8088"
+          - "8089:8089"
         links:
           - "php7.1"
           - "php5.6"
@@ -74,6 +70,7 @@ services:
           default:
             aliases:
               - api.alone.xmlocal.com
+              - adm.adpage.local.com
               - api.online.xmlocal.com
               - adm.platform.local.com
               - h5api.itogame.local.com
@@ -86,3 +83,18 @@ services:
               - marketing.api.local.com
               - marketing.apiwj.local.com
               - marketing.apiyp.local.com
+              - api.wd.cc
+              - marketing.apihw.local.com
+        extra_hosts:
+            - "host.localwj.com:192.168.8.134"
+    clickhouse:
+            build: ./clickhouse
+            container_name: "clickhouse"
+            restart: always
+            ports:
+                  - "9003:9000"
+                  - "8123:8123"
+            ulimits:
+                  nofile:
+                    soft: 300001
+                    hard: 300002

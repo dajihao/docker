@@ -24,7 +24,5 @@ RUN apt-get update \
     libjpeg62-turbo-dev \
     libpng-dev \
     net-tools \
-    inetutils-ping \
-    && apt-get clean \
-    && apt-get autoremove
+    inetutils-ping
 

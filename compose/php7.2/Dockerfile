@@ -4,23 +4,14 @@ ENV TZ=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Libs
-#RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list
-
-RUN echo \
-    deb http://mirrors.aliyun.com/debian/ stretch main non-free contrib\
-    deb-src http://mirrors.aliyun.com/debian/ stretch main non-free contrib\
-    deb http://mirrors.aliyun.com/debian-security stretch/updates main\
-    deb-src http://mirrors.aliyun.com/debian-security stretch/updates main\
-    deb http://mirrors.aliyun.com/debian/ stretch-updates main non-free contrib\
-    deb-src http://mirrors.aliyun.com/debian/ stretch-updates main non-free contrib\
-    deb http://mirrors.aliyun.com/debian/ stretch-backports main non-free contrib\
-    deb-src http://mirrors.aliyun.com/debian/ stretch-backports main non-free contrib\
-    > /etc/apt/sources.list
+RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list
 
 RUN apt-get clean
+
 RUN apt-get update
 
 RUN apt-get install -y \
+    curl \
     wget \
     git \
     zip \
@@ -29,10 +20,7 @@ RUN apt-get install -y \
     libnghttp2-dev \
     libpcre3-dev \
     libfreetype6-dev \
-    libjpeg62-turbo-dev \
-    libpng-dev \
-    && apt-get clean \
-    && apt-get autoremove
+    libjpeg62-turbo-dev
 
 RUN apt-get install -y supervisor \
     procps
@@ -47,6 +35,7 @@ RUN apt-get install -y supervisor \
 #    && tar -zxvf libmcrypt-2.5.8.tar.gz && cd libmcrypt-2.5.8 && ./configure && make && make install
 
 #RUN docker-php-ext-configure mcrypt && docker-php-ext-install mcrypt
+
 
 RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
    && docker-php-ext-install -j$(nproc) gd \
@@ -69,9 +58,4 @@ RUN echo "opcache.enable=1" >>/usr/local/etc/php/conf.d/docker-php-ext-opcache.i
     && echo "opcache.max_accelerated_files=4000" >>/usr/local/etc/php/conf.d/docker-php-ext-opcache.ini \
     && echo "opcache.revalidate_freq=1" >>/usr/local/etc/php/conf.d/docker-php-ext-opcache.ini \
     && echo "opcache.fast_shutdown=1" >>/usr/local/etc/php/conf.d/docker-php-ext-opcache.ini
-
-
-#CP /var/www/html/id_rsa ~/.ssh/ \
-#    && cp /var/www/html/id_rsa.pub ~/.ssh/ \
-#    && chmod 700  ~/.ssh/id_rsa
 
